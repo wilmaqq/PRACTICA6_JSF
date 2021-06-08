@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Confirmación Usuarios</title>
+    </h:head>
+    <h:body>
+        <h1>Confirnación de usuarios</h1>
+        <h:panelGrid columns="2" columnClasses="alinder,normal">
+            
+            <h:outputText value="Nombre: "/>
+            <h:outputText value="#{usuarioBean.nombre}"/>
+            
+            <h:outputText value="Apellidos: "/>
+            <h:outputText value="#{usuarioBean.apellidos}"/>
+            
+            <h:outputText value="Correo: "/>
+            <h:outputText value="#{usuarioBean.correo}"/>
+            
+            <h:outputText value="Password: "/>
+            <h:outputText value="#{usuarioBean.password}"/>
+        </h:panelGrid>
+        <h:form>
+            <h:commandLink action="usuarios" value="Retornar al Formulario"/>
+            <h:outputText value="&lt;br/&gt;" escape="false" />
+            <h:commandLink action="index" value="Retornar al inicio"/>
+        </h:form>
+    </h:body>
+</html>
+

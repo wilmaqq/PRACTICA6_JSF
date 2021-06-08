@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Registro de Libros</title>
+    </h:head>
+    <h:body>
+        <h1>Registro de libros</h1>
+        <h:form>
+            <h:panelGrid columns="3" columnClasses="alinder,alinizq,alinizq">
+                <h:outputLabel value="Titulo: " for="titulo"/>
+                <h:inputText id="titulo" label="Titulo" value="#{librosBean.titulo}">
+                <f:validateLength minimum="5"/>
+                </h:inputText>
+                <h:message for="titulo"/>
+                <h:outputLabel value="Autor: " for="autor"/>
+                <h:inputText id="autor" label="Autor" value="#{librosBean.autor}">
+                <f:validateLength minimum="5"/>
+                </h:inputText>
+                <h:message for="autor"/>
+                <h:outputLabel value="Resumen: " for="resumen"/>
+                <h:inputTextarea id="resumen" label="Resumen" rows="3" cols="15" value="#{librosBean.resumen}"/>
+                <h:message for="resumen"/>
+                <h:outputLabel value="Medio: " for="medio"/>
+                <h:selectOneRadio id="medio" label="Medio" value="#{librosBean.medio}">
+                    <f:selectItem itemValue="FISICO" itemLabel="Fisico"/>
+                    <f:selectItem itemValue="MAGNETICO" itemLabel="Magnetico"/>
+                </h:selectOneRadio>
+                <h:message for="medio"/>
+                <h:panelGroup/>
+                <h:commandButton id="registro" value="Enviar" action="confirmacionLibros"/>
+                </h:panelGrid>
+         </h:form>
+        <h:form>
+                <h:outputText value="&lt;br/&gt;" escape="false" />
+                <h:commandLink action="index" value="Retornar al inicio"/>
+        </h:form>
+    </h:body>
+</html>
+

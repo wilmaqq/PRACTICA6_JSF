@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Registro de Usuarios</title>
+    </h:head>
+    <h:body>
+        <h1>Registro de usuarios</h1>
+        <h:form>
+            <h:panelGrid columns="3" columnClasses="alinder,alinizq,alinizq">
+                <h:outputLabel value="Nombre: " for="nombre"/>
+                <h:inputText id="nombre" label="Nombre" value="#{usuarioBean.nombre}">
+                <f:validateLength minimum="5"/>
+                </h:inputText>
+                <h:message for="nombre"/>
+                <h:outputLabel value="Apellidos: " for="apellidos"/>
+                <h:inputText id="apellidos" label="Apellidos" required="true" value="#{usuarioBean.apellidos}"/>
+                <h:message for="apellidos"/>
+                <h:outputLabel value="Correo: " for="correo"/>
+                <h:inputText id="correo" label="Correo" required="true" value="#{usuarioBean.correo}">
+                    <f:validator validatorId="validadorCorreo"/>
+                </h:inputText>
+                <h:message for="correo"/>
+                <h:outputLabel value="Password: " for="password"/>
+                <h:inputSecret id="password" label="Password" value="#{usuarioBean.password}">
+                </h:inputSecret>
+                <h:message for="password"/>
+                <h:panelGroup/>
+                
+                <h:commandButton id="registro" value="Enviar" action="confirmacionUsuario"/>
+                </h:panelGrid>
+       </h:form>
+        <h:form>
+                
+                <h:outputText value="&lt;br/&gt;" escape="false" />
+                <h:commandLink action="index" value="Retornar al inicio"/>
+        </h:form>
+    </h:body>
+</html>
+

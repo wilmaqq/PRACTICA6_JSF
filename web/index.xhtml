@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Práctica 6 JSF</title> 
+    </h:head>
+    <h:body>
+        <h:form>
+        <h3>DATOS PERSONALES</h3>    
+            <h:panelGrid columns="1" border="2" columnClasses="alinder,normal">
+                <h:outputText value=" MATERIA: EMERGENTES-II"/>
+                <h:outputText value=" NOMBRE: WILMA QUISPE QUISPE"/>
+                <h:outputText value=" CARNET:9945314 LP. "/>
+                <h:outputText value=" RU.: 14007215 "/>
+                <h:outputText value=" PRACTICA 6 - JSF "/>
+            </h:panelGrid>
+            <h1>MENU DE REGISTROS</h1>
+            <h:panelGrid columns="2" columnClasses="alinder,normal">
+                <h:commandLink action="curso" value="Inscripción en Curso"/>
+                <h:outputText value="&lt;br/&gt;" escape="false" />
+                <h:commandLink action="usuarios" value="Registro de usuarios"/>
+                 <h:outputText value="&lt;br/&gt;" escape="false" />
+                <h:commandLink action="productos" value="Registro de productos"/>
+                 <h:outputText value="&lt;br/&gt;" escape="false" />
+                <h:commandLink action="libros" value="Registro de libros"/>
+            </h:panelGrid>    
+        </h:form>
+    </h:body>
+</html>
+

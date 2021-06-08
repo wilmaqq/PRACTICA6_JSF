@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Confirmacion de Productos</title>
+    </h:head>
+    <h:body>
+        <h1>CONFIRMACION DE PRODUCTOS</h1>
+        <h:panelGrid columns="2" columnClasses="alinder,normal">
+            
+            <h:outputText value="Producto: "/>
+            <h:outputText value="#{productosBean.producto}"/>
+            <h:outputText value="Categoria: "/>
+            <h:outputText value="#{productosBean.categoria}"/>
+            <h:outputText value="Existencia: "/>
+            <h:outputText value="#{productosBean.existencia}"/>
+            <h:outputText value="Precio: "/>
+            <h:outputText value="#{productosBean.precio}"/>
+        </h:panelGrid>
+        <h:form>
+            <h:commandLink action="productos" value="Retornar al Formulario"/>
+            <h:outputText value="&lt;br/&gt;" escape="false" />
+            <h:commandLink action="index" value="Retornar al inicio"/>
+        </h:form>
+    </h:body>
+</html>
+
